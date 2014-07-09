@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://192.168.0.6/svn/JGJ"
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/res/drawable-hdpi"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="default_ptr_flip.png"
+   checksum="972a1ac5c9d6e973b4b1d3c15ae4d82a"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.044000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"
+   prop-time="2013-07-25T02:13:22.586000Z"/>
+<entry
+   name="default_ptr_rotate.png"
+   checksum="d62dc27b80e14c3f5c4ab9be5e50a8f4"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.046000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"
+   prop-time="2013-07-25T02:13:22.503000Z"/>
+<entry
+   name="indicator_arrow.png"
+   checksum="09e9a51ed1cf1ddfc42a93af2f8ccbf1"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.047000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"
+   prop-time="2013-07-25T02:13:22.653000Z"/>
+</wc-entries>

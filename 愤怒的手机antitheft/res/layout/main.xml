@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:background="@+drawable/main_bg" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical" android:id="@+id/allLayout"
+	
+	>
+	 <LinearLayout
+            android:id="@+id/AdLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+             android:layout_alignParentTop="true"/>
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		 android:id="@+id/mainLayout"
+		 android:layout_below="@+id/AdLinearLayout"
+		 android:layout_gravity="center_horizontal"
+		 android:layout_marginTop="40dip">
+		
+		<ImageView android:id="@+id/imageEye1" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:paddingTop="10dp"
+			android:layout_weight="1"/>
+		<ImageView android:id="@+id/imageEye3" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:paddingTop="10dp" android:layout_weight="1"
+			/>
+	</LinearLayout>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="horizontal"
+	     android:layout_marginTop="30dip"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		 android:id="@+id/textLayout" android:layout_below="@+id/mainLayout">
+		<ImageView android:id="@+id/imageEye5" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			/>
+		<ImageView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="设 置"
+		android:id="@+id/btnSetting" 
+		android:layout_weight="1"
+		/>
+	</LinearLayout>
+	<LinearLayout 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+   android:layout_alignParentBottom="true"
+    android:layout_marginBottom="25dip"
+    android:orientation="vertical"
+	>
+	<LinearLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	>
+	<TextView android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="监控状态:"/>
+	<TextView android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:id="@+id/tvStatu"/>
+	</LinearLayout>
+	<ImageButton
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:id="@+id/btnControl"
+	android:layout_margin="5dip"
+	android:layout_centerHorizontal="true"
+	android:scaleType="fitXY"
+	android:layout_gravity="center"
+	>
+	</ImageButton>
+	</LinearLayout>
+</RelativeLayout>

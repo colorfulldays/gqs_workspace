@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.0.6/svn/JGJ"
+   name=""
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/src/com/handmark/pulltorefresh/library"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="ILoadingLayout.java"
+   checksum="05a872ae6787d037e0f513ded8736cf6"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.111000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="IPullToRefresh.java"
+   checksum="5c4f049de830d6de699d991cee46cfc8"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.114000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="LoadingLayoutProxy.java"
+   checksum="0bb1daf85b487f38176fcd0050f90a1f"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.115000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="OverscrollHelper.java"
+   checksum="97daa3e06fe5479f1c1f7eb04c9ed368"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.118000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshAdapterViewBase.java"
+   checksum="4a3480cee7fb9eafe1e6f6f51ab7f834"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.123000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshBase.java"
+   checksum="5ecb335eed0d2d1ec613a2c8cacba849"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.131000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshExpandableListView.java"
+   checksum="252318cf9045a24a9256c4cc0f031021"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.133000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshGridView.java"
+   checksum="a4f1ca80e286012ad68b9a13d16c2ac2"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.134000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshHorizontalScrollView.java"
+   checksum="2f2fb099f48d27e0f257c4ad68259114"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.134000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshListView.java"
+   checksum="b114c0f704e0521ec8340d9dd31e0784"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.138000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshScrollView.java"
+   checksum="8a0b081c76cb0c119ef1d5b6450bbcd8"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.139000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshWebView.java"
+   checksum="461849055c226404041f73e59c6cb817"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.140000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="extras"
+   kind="dir"/>
+<entry
+   name="internal"
+   kind="dir"/>
+</wc-entries>

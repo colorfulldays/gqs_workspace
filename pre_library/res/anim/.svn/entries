@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.0.6/svn/JGJ"
+   name=""
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/res/anim"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="slide_in_from_bottom.xml"
+   checksum="5aa6cb5835722d47464168c0aab1f234"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.040000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="slide_in_from_top.xml"
+   checksum="36dc7302e132e4a4efbd9b7b74bd01bd"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.041000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="slide_out_to_bottom.xml"
+   checksum="dfde755930605d62f451b71adacc9320"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.042000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="slide_out_to_top.xml"
+   checksum="61f0b9d81ff636ba8633ff657fc798b2"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.043000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+</wc-entries>

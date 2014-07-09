@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://192.168.0.6/svn/JGJ"
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/res/drawable-mdpi"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="default_ptr_flip.png"
+   checksum="56bbec9b749c4f6622c31f56927d4373"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.048000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"
+   prop-time="2013-07-25T02:13:22.235000Z"/>
+<entry
+   name="default_ptr_rotate.png"
+   checksum="055b2e2502053d4e47c83cb6b0deac7d"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.048000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"
+   prop-time="2013-07-25T02:13:22.297000Z"/>
+<entry
+   name="indicator_arrow.png"
+   checksum="448b078477f76b3ec9ca5c4b2c11c231"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.049000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"
+   prop-time="2013-07-25T02:13:22.521000Z"/>
+</wc-entries>

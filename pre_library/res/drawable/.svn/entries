@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.0.6/svn/JGJ"
+   name=""
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/res/drawable"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="indicator_bg_bottom.xml"
+   checksum="4b04ab263ac26580acade7a6d31346b2"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.060000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="indicator_bg_top.xml"
+   checksum="567565056fb60bded571306d318f2670"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.061000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+</wc-entries>

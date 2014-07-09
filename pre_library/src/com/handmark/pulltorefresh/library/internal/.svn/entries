@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   name=""
+   repos="https://192.168.0.6/svn/JGJ"
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/src/com/handmark/pulltorefresh/library/internal"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="EmptyViewMethodAccessor.java"
+   checksum="35db4da7099067b8a2811a74243469a3"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.145000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="FlipLoadingLayout.java"
+   checksum="a85edb7a82e3db2b73e15ac5debc2c7f"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.146000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="IndicatorLayout.java"
+   checksum="cf02376f8bfbb2d0a81ad880602b9592"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.147000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="LoadingLayout.java"
+   checksum="d2de29662bde9009c9f6d9beacdc0517"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.152000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="RotateLoadingLayout.java"
+   checksum="d551acae020fc00c908038176e8c7102"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.153000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="Utils.java"
+   checksum="0cfba08e3d2acf4ebde0d5f57bac3ba7"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.154000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="ViewCompat.java"
+   checksum="8021dce2b0bc2cd5759b037ec6f9c938"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.155000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+</wc-entries>

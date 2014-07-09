@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.0.6/svn/JGJ"
+   name=""
+   revision="1428"
+   last-author="gongqingshuai"
+   uuid="07fc8932-67e2-d745-8f35-0ad5eec42cce"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library"
+   committed-rev="1428"
+   kind="dir"
+   committed-date="2013-07-25T02:13:09.786296Z"/>
+<entry
+   name=".classpath"
+   revision="1429"
+   checksum="325a7c6ac16e1ed73a2f16f19b367319"
+   last-author="gongqingshuai"
+   text-time="2013-07-24T05:53:28.208000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name=".project"
+   revision="1429"
+   checksum="8bb12a623c33a78fca28c16377e3276d"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T02:15:37.684000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="AndroidManifest.xml"
+   revision="1429"
+   checksum="3641bdfdda278fffe78bdc840f17ddd3"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.034000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="LICENSE"
+   revision="1429"
+   checksum="d273d63619c9aeaf15cdaf76422c4f87"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.037000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="assets"
+   kind="dir"/>
+<entry
+   name="bin"
+   kind="dir"/>
+<entry
+   name="gen"
+   kind="dir"/>
+<entry
+   name="pom.xml"
+   revision="1429"
+   checksum="02a38b4a017ccbc2ad385ebaf4669670"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.038000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="project.properties"
+   revision="1429"
+   checksum="364c4c5354b23550518a7869dc1376a6"
+   last-author="gongqingshuai"
+   text-time="2013-07-24T05:53:28.209000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="res"
+   kind="dir"/>
+<entry
+   name="src"
+   kind="dir"/>
+</wc-entries>

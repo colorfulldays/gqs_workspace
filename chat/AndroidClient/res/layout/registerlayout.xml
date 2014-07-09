@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    <TextView 
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:gravity="center"
+  android:textSize="20dip"
+  android:textStyle="bold"
+  android:text="用户注册"
+  />
+    <TableLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1"
+    >
+    <TableRow >
+    <TextView
+    android:text="用户名:"
+     
+    />
+    <EditText
+    android:hint="用户名"
+    android:id="@+id/etRUser"
+    
+    />
+    </TableRow>
+    <TableRow >
+    <TextView
+    android:text="密 码："
+    
+    />
+    <EditText
+    android:hint="密码"
+    android:id="@+id/etRPWD"
+    />
+    </TableRow>
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+       <Button
+    android:layout_weight="1"
+    android:text="确定"
+    android:id="@+id/btnConfirm"
+      android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    />
+    <Button
+    android:layout_weight="1"
+    android:text="取消"
+    android:id="@+id/btnCancel"
+        android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    />
+    </LinearLayout>
+    
+ 
+    </TableLayout>
+</LinearLayout>

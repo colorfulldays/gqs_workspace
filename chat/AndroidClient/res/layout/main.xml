@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<LinearLayout
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+>
+    <EditText   
+        android:layout_width="fill_parent"  
+        android:layout_height="220px"  
+        android:id="@+id/chatPanel"  
+        android:singleLine="false"  
+        android:scrollbars="vertical"  
+        android:focusable="false"  
+        android:enabled="false"  
+        android:maxLines="15"  
+        android:textColor="#000000"
+        android:clickable="true"  
+        android:background="#FFF8DC"
+      
+    /> 
+ 
+    </LinearLayout>
+    <LinearLayout
+      
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    
+    <TextView 
+    android:background="#FF83FA"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/addFace"
+    android:textSize="15dip"
+    
+    android:text="添加表情"
+    />
+    <Spinner 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:id="@+id/spinner"
+   
+    />
+    </LinearLayout>
+    <LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+<TextView
+android:text="所有人"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:textSize="17dip"
+android:layout_weight="4"
+android:id="@+id/tvTalker"
+
+/>
+<EditText 
+android:layout_width="fill_parent"
+android:layout_height="70dip"
+android:scrollbars="vertical"
+android:id="@+id/etMessage"
+android:hint="发送内容"
+android:maxLines="3"
+android:singleLine="false"
+
+android:layout_weight="1"
+/>
+</LinearLayout>
+<LinearLayout 
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+>
+<Button
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/btnSend"
+android:layout_weight="1"
+android:text="发送"
+/>
+<Button
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/btnClear"
+android:layout_weight="1"
+android:text="清空"
+/>
+
+</LinearLayout>
+<Button
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/btnExit"
+
+android:text="退 出"
+/>
+</LinearLayout>

@@ -1,0 +1,25 @@
+import java.awt.List;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.rmi.server.SocketSecurityException;
+import java.util.ArrayList;
+
+public class SimpleServer {
+//	static InputStream is;
+public static ArrayList<Socket> sockets=new ArrayList<Socket>();
+private static ArrayList<MyThread> threads=new ArrayList<MyThread>();
+public static void main(String[] args) throws IOException {
+	ServerSocket ss=new ServerSocket(54321);
+
+	System.out.print("服务器开启");
+	while(true)
+	{
+		Socket s=ss.accept();
+		System.out.print("连接成功");
+		MyThread thread=new MyThread(s,threads);
+		threads.add(thread);
+		new Thread(thread).start();
+	}
+}
+}

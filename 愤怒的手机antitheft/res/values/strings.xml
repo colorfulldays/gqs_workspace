@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="hello">hello</string>
+  <string name="app_name">愤怒的手机antitheft</string>
+  <string name="start">服务运行中...</string>
+  <string name="stop">已关闭服务...</string>
+  <string name="pleaseInputGesture">请输入用于平息警告的手势</string>
+  <string name="pleaseInputPhoneNumber">请输入手机号码：</string>
+  <string name="done">完成</string>
+  <string name="reset">重置</string>
+  <string name="password">输入解锁密码</string>
+  <string name="cancel">取消</string>
+  <string name="backspace">清除</string>
+  <string name="back">返回</string>
+  <string name="save_success">保存成功</string>
+  <string name="save_failed">保存失败</string>
+   <string name="load_failed">载入失败</string> 
+</resources>

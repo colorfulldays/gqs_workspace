@@ -1,0 +1,229 @@
+package com.gqs.AndroidClient;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class AndroidClientActivity extends Activity {
+	private EditText etMsg;
+	private Button btnSend;
+	private Button btnClear;
+	private Socket s;
+	private BufferedReader br;
+	PrintWriter pw;
+	private String ADDRESS="10.0.2.2";
+	private int PORT=54321;
+	private boolean flag = true;
+	private EditText etChat;
+	Handler childHanler;
+	Handler handler ;
+	private String password;
+	private String username=null;
+	private ReadMessage rm;
+	private ListView listView;
+	private ArrayAdapter adapter;
+	private  String talker="all";
+	private Button btnExit;
+	private String[] users = new String[] {};
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+		etChat = (EditText) findViewById(R.id.chatPanel);
+		etMsg = (EditText) findViewById(R.id.etMessage);
+		btnSend = (Button) findViewById(R.id.btnSend);
+		btnClear = (Button) findViewById(R.id.btnClear);
+		btnExit=(Button)findViewById(R.id.btnExit);
+		//连接服务器
+		connect();
+		
+		listView = (ListView) findViewById(R.id.listView);
+		listView.setOnItemClickListener(new OnItemClickListener()
+		{
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				talker=(String) parent.getAdapter().getItem(position);
+				
+			}
+			
+		});
+		adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,
+				users);
+		listView.setAdapter(adapter);
+		Intent i = AndroidClientActivity.this.getIntent();
+		username = i.getStringExtra("name");
+	    password=i.getStringExtra("pwd");
+		btnClear.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				etMsg.setText("");
+			}
+		});
+		btnSend.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if (etMsg.getText().toString().equals("")) {
+					Toast.makeText(getApplicationContext(), "发送信息为空",
+							Toast.LENGTH_SHORT).show();
+					return;
+				}
+				String msg = "talk," + username + "," + talker + ","
+						+ etMsg.getText().toString();
+				if (pw != null) {
+					pw.println(msg);
+					pw.flush();
+					etMsg.setText("");
+				}
+			}
+		});
+		
+	       handler = new Handler() {
+			public void handleMessage(Message msg) {
+				String str = (String) msg.obj;
+				String[] s = str.split(":");
+				users = s[2].split(",");
+				Toast.makeText(getApplicationContext(), s[2], Toast.LENGTH_SHORT)
+						.show();
+				adapter.notifyDataSetChanged();
+				adapter = new ArrayAdapter(AndroidClientActivity.this,
+						android.R.layout.simple_list_item_1, users);
+				listView.setAdapter(adapter);
+				Log.i("client", "handleMessage:" + str);
+				Toast.makeText(getApplicationContext(), s[0], Toast.LENGTH_SHORT).show();
+				if(!s[0].equals("0"))
+				{
+					etChat.append(s[0] + ":" + s[1] + "\n");
+				}
+//				if(s[0]==null)
+//				{
+//					etChat.setText("");
+//				}
+				
+			}
+		};
+		//启动子线程
+		rm = new ReadMessage();
+		rm.start();
+//退出程序
+		btnExit.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				flag=false;
+				Toast.makeText(getApplicationContext(), "quit", Toast.LENGTH_SHORT).show();
+				pw.println("talk," + username + "," + password + ","
+						+ "quit");
+				pw.flush();
+				flag = false;
+				try {
+					if (pw != null) {
+						pw.close();
+					}
+					br.close();
+					s.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				AndroidClientActivity.this.finish();
+			}
+			
+		});
+	}
+	
+	//当Activity销毁时，关闭连接
+	protected void onDestroy() {
+		pw.println("talk," + username + "," + password + ","
+				+ "quit");
+		pw.flush();
+		flag = false;
+		try {
+			if (pw != null) {
+				pw.close();
+			}
+			br.close();
+			s.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		super.onDestroy();
+	}
+
+	private class ReadMessage extends Thread {
+
+		String message = null;
+
+		public void run() {
+			// TODO Auto-generated method stub
+			
+			while (flag) {
+				message = readMessage();
+				Log.i("client", "message" + message);
+				while (message != null) {
+					Message m = handler.obtainMessage();
+					m.obj = message + "\n";
+					handler.sendMessage(m);
+					message = null;
+				}
+			}
+		}
+
+		public String readMessage() {
+			try {
+				return br.readLine();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				Log.i("client", "客户端读取信息出错");
+			}
+			return null;
+		}
+	}
+	//连接服务器
+	public void connect()
+	{
+		try {
+
+			s = new Socket(ADDRESS, PORT);
+			br = new BufferedReader(new InputStreamReader(s
+					.getInputStream(), "utf-8"));
+			// Socket只能获取一次流文件
+			pw = new PrintWriter(s.getOutputStream(), true);
+			String msg = "talk," + username + "," + talker;
+	if (pw != null) {
+		pw.println(msg);
+		pw.flush();
+		etMsg.setText("");
+	}
+		} catch (UnknownHostException e1) {
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+}

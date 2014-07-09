@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.0.6/svn/JGJ"
+   name=""
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/res/values"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="attrs.xml"
+   checksum="7687a5e1108f081bafc7bd6825906997"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.107000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="dimens.xml"
+   checksum="8f314fa51a8342b8bbac318ef024731c"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.108000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="ids.xml"
+   checksum="f6b42c58dd2c3f59b1337b3b4958d239"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.109000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="pull_refresh_strings.xml"
+   checksum="e85691f69784ac2796a19f13f77bf401"
+   last-author="gongqingshuai"
+   text-time="2013-07-25T02:09:16.505000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+</wc-entries>

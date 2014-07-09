@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.0.6/svn/JGJ"
+   name=""
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/res/layout"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="pull_to_refresh_header_horizontal.xml"
+   checksum="cf20891036630d274ee9b8aed3b817d3"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.062000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="pull_to_refresh_header_vertical.xml"
+   checksum="87ee06ba6f072ce377fb896bae0a34d5"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.062000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+</wc-entries>

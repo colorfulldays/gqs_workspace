@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<LinearLayout 
+  xmlns:android="http://schemas.android.com/apk/res/android" 
+  android:background="@drawable/white" 
+  android:orientation="vertical" 
+  android:layout_width="fill_parent" 
+  android:layout_height="fill_parent" 
+> 
+  <LinearLayout 
+    android:orientation="horizontal" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+  > 
+
+  <ImageView 
+      android:id="@+id/myGesImage" 
+      android:layout_width="wrap_content"  
+      android:layout_height="wrap_content"    
+    />  
+
+    <TextView 
+      android:id="@+id/myTextViewUp" 
+      android:layout_width="wrap_content"  
+      android:layout_height="wrap_content" 
+      android:textColor="@drawable/green" 
+      android:text="@string/pleaseInputGesture"
+      android:textSize="30sp" 
+    />  
+  </LinearLayout> 
+  <android.gesture.GestureOverlayView 
+    android:id="@+id/myGestures" 
+    android:layout_width="fill_parent"  
+    android:layout_height="0dip" 
+    android:layout_weight="1.0" 
+    android:gestureStrokeType="single" 
+  /> 
+  <LinearLayout 
+    style="@android:style/ButtonBar" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal"> 
+   <Button android:layout_height="wrap_content" android:layout_width="0dip" android:text="@string/back" android:id="@+id/myButtonCancel" android:layout_weight="1"/>
+  </LinearLayout> 
+</LinearLayout>

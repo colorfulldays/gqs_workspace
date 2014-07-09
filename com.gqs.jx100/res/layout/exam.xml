@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   <TextView android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:gravity="center"
+       android:textSize="10pt"
+       android:textStyle="bold"
+       android:text="剩余时间"
+       android:id="@+id/tvTime"
+       android:background="#FFFFFF"/>
+       <ViewFlipper 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_below="@+id/tvTime"
+    android:id="@+id/ViewFlipper">
+    </ViewFlipper>
+ <Button 
+     android:text="交卷"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/btnSubmit"
+     android:layout_alignParentBottom="true"/>
+</RelativeLayout>

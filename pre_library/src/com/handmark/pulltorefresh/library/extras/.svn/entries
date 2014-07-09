@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   repos="https://192.168.0.6/svn/JGJ"
+   name=""
+   revision="1429"
+   last-author="gongqingshuai"
+   url="https://192.168.0.6/svn/JGJ/Android/pre_library/src/com/handmark/pulltorefresh/library/extras"
+   committed-rev="1429"
+   kind="dir"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="PullToRefreshWebView2.java"
+   checksum="1c993e15391dc6aee4b1fab627953979"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.143000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+<entry
+   name="SoundPullEventListener.java"
+   checksum="d4b7824e01cb25dce2dbf9f0d0787b96"
+   last-author="gongqingshuai"
+   text-time="2013-07-20T01:52:58.144000Z"
+   committed-rev="1429"
+   kind="file"
+   committed-date="2013-07-25T02:13:23.493000Z"/>
+</wc-entries>

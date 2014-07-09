@@ -1,0 +1,190 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.Socket;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class MyThread implements Runnable {
+
+	Socket s = null;
+	BufferedReader br = null;
+	PrintWriter pw;
+	ArrayList<MyThread> threads;
+	private DAOSql ds;
+	private User user;
+	private boolean flag=true;
+	public static StringBuffer users;
+	StringBuffer sb = new StringBuffer();
+	public MyThread(Socket s, ArrayList<MyThread> threads) {
+		try {
+			ds = new DAOSql();
+			this.s = s;
+			users=new StringBuffer();
+			this.threads = threads;
+			br = new BufferedReader(new InputStreamReader(s.getInputStream(),
+					"utf-8"));
+			pw = new PrintWriter(s.getOutputStream(), true);
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void write(String msg) throws IOException {
+		pw.println(msg);
+		pw.flush();
+	}
+   
+	@Override
+	public void run() {
+
+		while (flag) {
+			sb.delete(0, sb.length());
+		
+			String msg = readFromClient();
+			if (msg == null || msg.equals("")) {
+				continue;
+			}
+			if (msg != null && msg.equals("quit")) {
+				
+				break;
+			}
+		
+			try {
+				users=ds.getUsers();
+			} catch (SQLException e2) {
+				// TODO Auto-generated catch block
+				e2.printStackTrace();
+			}
+			System.out.println(msg);
+			String[] command = msg.split(",");
+			if (command[0].equals("register") && command.length == 3) {
+				user = new User(command[1], command[2]);
+
+				try {
+					if (!register(user)) {
+						msg = "no";
+					
+					} else {
+						msg = "yes";
+					}
+					this.write(msg);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			} else if (command[0].equals("login") && command.length == 3) {
+				user = new User(command[1], command[2]);
+				System.out.println(user.getName()+","+user.getPassword());
+				try {
+					if (ds.isLogin(user)) {
+						msg = "yes";
+						 ds.changeState(1, user);
+						users.append(","+user.getName());
+					} else {
+						msg = "no";
+					}
+					this.write(msg);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+//				return;
+				//聊天
+			} else if (command[0].equals("talk") && command.length == 4||command[0].equals("talk")&&command.length==3) {
+				System.out.print(sb.toString() + "\n");
+				if (command.length==4&&command[3].equals("quit")) {
+					user=new User(command[1],command[2]);
+					 ds.changeState(0, user);
+					flag=false;
+					break;
+				}
+					try {
+                        if(command.length==3)
+                        {
+                        	for (MyThread thread : threads) {
+    							thread.write(" "+":" + " "+":"+users.toString());
+    						}
+                        }
+                        else
+                        {
+                        	for (MyThread thread : threads) {
+    							thread.write(command[1] + ":" + command[3]+":"+users.toString());
+    						}
+                        }
+						
+                        if(user!=null)
+            			{
+            				 ds.changeState(0, user);
+            			}
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+						pw.close();
+						try {
+							br.close();
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						System.out.print("服务器发送信息出错");
+
+					}
+//					sb.delete(0, sb.length());
+ 
+				
+			}
+		}
+
+		try {
+//			if(user!=null)
+//			{
+//				 ds.changeState(0, user);
+//			}
+           
+			pw.close();
+			br.close();
+			s.close();
+			threads.remove(this);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+
+	}
+
+	public boolean register(User u) throws SQLException {
+
+		if (ds.checkUer(u)) {
+			return false;
+		} else {
+			ds.insert(u);
+			return true;
+		}
+	}
+
+	private String readFromClient() {
+		try {
+			return br.readLine();
+		} catch (IOException e) {
+			e.printStackTrace();
+			// 将出错的是socket移除列表
+			threads.remove(this);
+		}
+		return null;
+	}
+
+}

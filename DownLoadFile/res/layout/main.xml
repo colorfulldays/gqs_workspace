@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:descendantFocusability="blocksDescendants"
+   
+    >
+  
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="文件下载程序" />
+         <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="下载地址"
+        android:id="@+id/downloadURL"
+        
+       
+       />
+         <EditText 
+             android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="文件名称"
+        android:id="@+id/etFileName"/>
+    <Button     
+    android:id="@+id/downloadMp3"   
+    android:layout_width="fill_parent"   
+    android:clickable="false"
+    android:focusable="false"
+     
+    android:layout_height="wrap_content"    
+    android:text="开始下载"   
+    />  
+   <ScrollView 
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       >
+       <LinearLayout 
+           android:id="@+id/parentLayout"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           ></LinearLayout>
+   </ScrollView>
+</LinearLayout>
